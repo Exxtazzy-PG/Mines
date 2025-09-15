@@ -1,0 +1,130 @@
+.status {
+  padding: 20px 30px;
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80px;
+}
+
+.current-player {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.2rem;
+  color: #4a5568;
+}
+
+.player-label {
+  font-weight: 500;
+}
+
+.player-number {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4299e1;
+  background: linear-gradient(135deg, #ebf8ff 0%, #bee3f8 100%);
+  padding: 8px 16px;
+  border-radius: 12px;
+  border: 2px solid #4299e1;
+  animation: pulse 2s infinite;
+}
+
+.player-info {
+  font-size: 1rem;
+  color: #718096;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.status-message {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 20px 30px;
+  border-radius: 12px;
+  animation: statusAppear 0.5s ease-out;
+}
+
+.bomb-message {
+  background: linear-gradient(135deg, #fed7d7 0%, #fbb6ce 100%);
+  color: #742a2a;
+  border: 2px solid #e53e3e;
+  box-shadow: 0 4px 12px rgba(229, 62, 62, 0.3);
+}
+
+.win-message {
+  background: linear-gradient(135deg, #f0fff4 0%, #c6f6d5 100%);
+  color: #22543d;
+  border: 2px solid #48bb78;
+  box-shadow: 0 4px 12px rgba(72, 187, 120, 0.3);
+}
+
+@keyframes statusAppear {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+@media (max-width: 768px) {
+  .status {
+    padding: 15px 20px;
+    min-height: 70px;
+  }
+  
+  .current-player {
+    font-size: 1.1rem;
+    gap: 10px;
+  }
+  
+  .player-number {
+    font-size: 1.7rem;
+    padding: 6px 12px;
+  }
+  
+  .status-message {
+    font-size: 1.3rem;
+    padding: 15px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .status {
+    padding: 12px 15px;
+    min-height: 60px;
+  }
+  
+  .current-player {
+    font-size: 1rem;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .player-number {
+    font-size: 1.5rem;
+    padding: 4px 10px;
+  }
+  
+  .status-message {
+    font-size: 1.1rem;
+    padding: 12px 15px;
+  }
+}
